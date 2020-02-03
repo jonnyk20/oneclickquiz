@@ -15,10 +15,6 @@ import os
 import django_heroku
 
 
-# Configure app for Heroku deployment
-django_heroku.settings(locals())
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -127,3 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# # Configure app for Heroku deployment
+django_heroku.settings(locals())
