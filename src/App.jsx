@@ -8,7 +8,7 @@ const createQuiz = async items => {
 
   formData.append("items", items);
 
-  const response = await fetch("/create/", {
+  const response = await fetch("quiz/create/", {
     method: "POST",
     body: formData
   });
