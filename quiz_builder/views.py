@@ -8,6 +8,9 @@ def parse_string(string):
     items = string.split('\n')
     return items
 
+def viewQuiz(request, quiz_id):
+    quiz = formatQuiz()
+    return JsonResponse(quiz, safe=False)
 
 @csrf_exempt
 def createQuiz(request):
@@ -16,8 +19,8 @@ def createQuiz(request):
         if form.is_valid():
             items = request.POST['items']
             items = parse_string(items)
-            quiz = formatQuiz()
+            
 
-            return JsonResponse({'quiz': quiz}, safe=False)
+            return JsonResponse({'success': True}, safe=False)
         else:
             return JsonResponse({})

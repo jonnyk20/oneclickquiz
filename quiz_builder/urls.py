@@ -6,4 +6,5 @@ from . import views
 
 urlpatterns = [
     path('create/', views.createQuiz, name='create'),
+    path('<int:quiz_id>/', views.viewQuiz, name='view_quiz'),
 ]
