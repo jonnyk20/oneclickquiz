@@ -36,16 +36,18 @@ const Quiz = () => {
   };
 
   return (
-    <div>
-      <div>{`Score: ${score}/${maxScore}`}</div>
-      {!!quiz.questions && !isFinished && (
-        <Question
-          question={quiz.questions[currentQuestion]}
-          incrementScore={incrementScore}
-          incrementQuestion={incrementQuestion}
-        />
-      )}
-      {isFinished && <div>Done</div>}
+    <div className="container">
+      <div className="quiz">
+        <div>{`Score: ${score}/${maxScore}`}</div>
+        {!!quiz.questions && !isFinished && (
+          <Question
+            question={quiz.questions[currentQuestion]}
+            incrementScore={incrementScore}
+            incrementQuestion={incrementQuestion}
+          />
+        )}
+        {isFinished && <div>Done</div>}
+      </div>
     </div>
   );
 };
