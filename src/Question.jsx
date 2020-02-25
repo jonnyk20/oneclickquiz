@@ -36,6 +36,10 @@ const Question = ({ question, incrementScore, incrementQuestion }) => {
 
   const answerFeedback = isAnsweredCorrectly ? "Correct!" : "Wrong!";
 
+  console.log("choices[correct_answer]", choices[correct_answer]);
+  console.log("choices[correct_answer]", choices);
+  console.log("choices[correct_answer]", correct_answer);
+
   return (
     <div className="question">
       <div className="question__image-container">
